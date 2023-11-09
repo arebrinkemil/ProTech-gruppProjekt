@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap");
+h1 {
+  font-family: "Geologica", sans-serif;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+header {
+  background: #eaeaea;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  padding: 0 1.25rem;
+}
+
+#banner img {
+  width: 100%;
+}
+
+li a {
+  color: #000;
+  text-decoration: none;
+}
+
+li:hover a {
+  text-decoration: underline;
+}
+
+/* Mobile Toggle */
+
+.nav-toggle {
+  display: none;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-toggle img {
+  width: 1.5rem;
+  transition: 300ms all ease;
+}
+
+.nav-toggle:hover img {
+  opacity: 0.6;
+}
+
+.open {
+  height: 100vh;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Mobile */
+@media all and (max-width: 720px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  nav {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: 250ms height ease-in-out;
+  }
+
+  li {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+
+  li a {
+    font-size: 1.4rem;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  #banner {
+    position: relative;
+    max-height: 90vh;
+  }
+
+  #banner img {
+    width: 100%;
+    height: 93vh;
+    object-fit: cover;
+  }
+
+  #banner-text {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20vw; /* Adjust the font size based on viewport width */
+    color: black;
+    text-align: center; /* Center the text horizontally */
+  }
+
+  #textbox {
+    margin: 40px 20px 40px 20px;
+  }
+
+  #products {
+    width: 100%;
+  }
+
+  .product {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product img {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .product-description {
+    width: 100%;
+    margin-left: 20px;
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    background: white;
+
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+  }
+
+  .slider > div {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    border: 1px #e9e9e9 solid;
+    box-sizing: border-box;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer h2 {
+    margin: 0;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+}
