@@ -131,9 +131,10 @@ li:hover a {
     bottom: 0;
     left: 0;
     width: 100%;
-    font-size: 20vw; /* Adjust the font size based on viewport width */
+    font-size: 23vw; /* Adjust the font size based on viewport width */
     color: black;
     text-align: center; /* Center the text horizontally */
+    line-height: 145%;
   }
 
   #textbox {
