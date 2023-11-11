@@ -72,6 +72,7 @@ li:hover a {
 
 .open {
   height: 100vh;
+  background-color: white;
 }
 
 .hidden {
@@ -80,6 +81,23 @@ li:hover a {
 
 /* Mobile */
 @media all and (max-width: 720px) {
+  .title {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  span.char {
+    display: inline-block;
+    animation: slide-up 1.25s cubic-bezier(0.5, 0.2, 0, 1);
+    animation-fill-mode: both;
+    animation-delay: calc(var(--char-index) * 0.2s);
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(125%);
+    }
+  }
+
   .navbar {
     display: flex;
     flex-direction: row;
@@ -102,6 +120,11 @@ li:hover a {
 
   .nav-button {
     background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    width: 80px;
+  }
+
+  .border {
     color: black;
     border: 2px solid #000000;
   }
@@ -125,6 +148,7 @@ li:hover a {
 
   .nav-toggle {
     display: block;
+    width: 80px;
   }
 
   #banner {
@@ -140,14 +164,17 @@ li:hover a {
 
   #banner-text {
     position: absolute;
-
+    font-family: "Geologica", sans-serif;
+    font-weight: 800;
+    margin-top: 0px;
+    margin-bottom: 0px;
     bottom: 0;
     left: 0;
     width: 100%;
-    font-size: 23vw; /* Adjust the font size based on viewport width */
+    font-size: 36vw;
     color: black;
-    text-align: center; /* Center the text horizontally */
-    line-height: 145%;
+    text-align: left;
+    line-height: 80%;
   }
 
   #textbox {
