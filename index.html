@@ -4,9 +4,213 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <title>PRO Tech</title>
   </head>
   <body>
+    <div id="signup">
+      <p>Prenumerera på vårt nyhetsbrev och få 10% off ...</p>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="navbar">
+          <div class="nav-toggle" id="navToggle">
+            <img
+              id="navClosed"
+              class="navIcon"
+              src="https://www.richardmiddleton.me/wp-content/themes/richardcodes/assets/img/hamburger.svg"
+              alt="hamburger menu"
+            />
+            <img
+              id="navOpen"
+              class="navIcon hidden"
+              src="https://www.richardmiddleton.me/wp-content/themes/richardcodes/assets/img/close.svg"
+              alt="close hamburger"
+            />
+          </div>
+          <h2>Logo</h2>
+          <div class="nav-buttons">
+            <button class="nav-button border">Sign Up</button>
+            <button class="nav-button btn">
+              <i class="fa fa-angle-down"></i>language
+            </button>
+          </div>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="banner">
+      <!-- <img src="https://unsplash.it/400/900?cold" alt="Banner Image" /> -->
+      <div id="banner-text">
+        <div class="title" data-splitting>Pro</div>
+        <div class="title" data-splitting>Tech</div>
+      </div>
+    </div>
+
+    <div id="textbox">
+      <h2 style="font-weight: bold">Title</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+      </p>
+      <p>
+        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+        sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit amet risus.
+        Donec egestas. Class aptent taciti sociosqu ad litora torquent per
+        conubia nostra, per inceptos himenaeos.
+      </p>
+    </div>
+
+    <section id="products">
+      <div class="product">
+        <img src="https://picsum.photos/400/600" alt="Product Image" />
+        <div class="product-description">
+          <h2>Product Name</h2>
+          <p>This is a short description of the product.</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="https://picsum.photos/400/600" alt="Product Image" />
+        <div class="product-description">
+          <h2>Product Name</h2>
+          <p>This is a short description of the product</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="textbox">
+      <h2 style="font-weight: bold">Title</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+      </p>
+      <p>
+        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+        sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit amet risus.
+        Donec egestas. Class aptent taciti sociosqu ad litora torquent per
+        conubia nostra, per inceptos himenaeos.
+      </p>
+
+      <form>
+        <input type="email" placeholder="Email" />
+        <button class="btn">Submit</button>
+      </form>
+    </div>
+
+    <section id="products">
+      <div class="product">
+        <img src="https://picsum.photos/400/600" alt="Product Image" />
+        <div class="product-description">
+          <h2>Product Name</h2>
+          <p>This is a short description of the product</p>
+        </div>
+      </div>
+
+      <div class="product">
+        <img src="https://picsum.photos/400/600" alt="Product Image" />
+        <div class="product-description">
+          <h2>Product Name</h2>
+          <p>This is a short description of the product</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="textbox">
+      <h2 style="font-weight: bold">Title</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+      </p>
+      <p>
+        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+        sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit amet risus.
+        Donec egestas. Class aptent taciti sociosqu ad litora torquent per
+        conubia nostra, per inceptos himenaeos.
+      </p>
+
+      <form>
+        <button class="btn">Läs mer</button>
+      </form>
+    </div>
+
+    <div class="carousel-container">
+      <div class="slider">
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+        <div>
+          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="textbox">
+        <h2 style="font-weight: bold">Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          risus.
+        </p>
+        <p>
+          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
+          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
+          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+
+        <form>
+          <input type="email" placeholder="Email" />
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+
+      <div class="footer-col">
+        <h2>link 1</h2>
+        <h2>link 2</h2>
+        <h2>link 3</h2>
+        <h2>link 4</h2>
+        <h2>link 5</h2>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
+    <script>
+      Splitting();
+    </script>
   </body>
 </html>
