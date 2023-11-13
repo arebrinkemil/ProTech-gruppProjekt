@@ -298,7 +298,7 @@ footer h2 {
         rgba(245, 246, 252, 0),
         rgb(255, 255, 255)
       ),
-      url("https://unsplash.it/1200/900?cold");
+      url("/images/shoe.png");
   }
 
   #banner-text {
