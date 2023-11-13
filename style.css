@@ -52,7 +52,7 @@ header {
 .button {
   width: 48px;
   height: 48px;
-  background: rgb(255, 196, 0);
+  background: rgba(255, 255, 255, 0);
   padding: 12px;
   display: inline-block;
   cursor: pointer;
@@ -66,12 +66,12 @@ header {
   z-index: 201;
 }
 .button:hover {
-  background: #ff9d00;
+  background: #ffffff00;
 }
 .button span {
   height: 3px;
   width: 100%;
-  background: white;
+  background: rgb(0, 0, 0);
   display: inline-block;
   transition: all 0.5s cubic-bezier(0.62, 0.43, 0.35, 1.47);
 }
@@ -212,7 +212,7 @@ li a {
 
 #banner {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 25px);
   background-image: url("https://unsplash.it/400/900?cold");
   background-size: cover;
 }
