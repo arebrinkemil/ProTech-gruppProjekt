@@ -287,6 +287,83 @@ footer h2 {
   .nav-buttons {
     padding-right: 4rem;
   }
+  #unleash {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20%;
+    padding-left: 20%;
+    padding-right: 20%;
+    align-items: center;
+    gap: 10%;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 30%;
+    padding-left: 30%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  #products {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+  }
+  #journey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20%;
+    padding-right: 50%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    width: 100%;
+    background: white;
+  }
+
+  .carousel-container > h2 {
+    padding: 5%;
+  }
+
+  .slider > div {
+    flex-shrink: 0;
+    width: 25%;
+    height: 300px;
+    text-align: center;
+    border: 1px #e9e9e9 solid;
+    box-sizing: border-box;
+    object-fit: cover;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+  }
+
+  footer > div {
+    max-width: 40%;
+  }
+
+  img:hover {
+    border-radius: 25px;
+    transition-duration: 200ms;
+  }
 }
 
 /* tablet */
