@@ -25,42 +25,27 @@
       <p>Prenumerera på vårt nyhetsbrev och få 10% off ...</p>
     </div>
 
-    <header>
-      <div class="container">
-        <div class="navbar">
-          <div class="nav-toggle" id="navToggle">
-            <img
-              id="navClosed"
-              class="navIcon"
-              src="https://www.richardmiddleton.me/wp-content/themes/richardcodes/assets/img/hamburger.svg"
-              alt="hamburger menu"
-            />
-            <img
-              id="navOpen"
-              class="navIcon hidden"
-              src="https://www.richardmiddleton.me/wp-content/themes/richardcodes/assets/img/close.svg"
-              alt="close hamburger"
-            />
-          </div>
-          <h2>Logo</h2>
-          <div class="nav-buttons">
-            <button class="nav-button border">Sign Up</button>
-            <button class="nav-button btn">
-              <i class="fa fa-angle-down"></i>language
-            </button>
-          </div>
-        </div>
+    <div class="menu">
+      <input type="checkbox" id="check" />
+      <label for="check" class="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="siteLogo"><h2>Logo</h2></div>
 
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      <nav>
+        <a href="#">Element 1</a>
+        <a href="#">Element 2</a>
+        <a href="#">Element 3</a>
+      </nav>
+    </div>
+    <div class="nav-buttons">
+      <button class="nav-button border">Sign Up</button>
+      <button class="nav-button btn">
+        <i class="fa fa-angle-down"></i>language
+      </button>
+    </div>
     <div id="banner">
       <!-- <img src="https://unsplash.it/400/900?cold" alt="Banner Image" /> -->
       <div id="banner-text">
@@ -69,20 +54,22 @@
       </div>
     </div>
 
-    <div id="textbox">
-      <h2 style="font-weight: bold">Title</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-      </p>
-      <p>
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit amet risus.
-        Donec egestas. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos.
-      </p>
-    </div>
+    <section id="unleash">
+      <div id="textbox">
+        <h2 style="font-weight: bold">Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          risus.
+        </p>
+        <p>
+          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
+          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
+          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos.
+        </p>
+        <button class="textboxbtn">Läs mer</button>
+      </div>
 
-    <section id="products">
       <div class="product">
         <img src="https://picsum.photos/400/600" alt="Product Image" />
         <div class="product-description">
@@ -90,91 +77,93 @@
           <p>This is a short description of the product.</p>
         </div>
       </div>
-
-      <div class="product">
+      <div class="product" id="desktop-hidden">
         <img src="https://picsum.photos/400/600" alt="Product Image" />
         <div class="product-description">
           <h2>Product Name</h2>
-          <p>This is a short description of the product</p>
+          <p>This is a short description of the product.</p>
         </div>
       </div>
     </section>
 
-    <div id="textbox">
-      <h2 style="font-weight: bold">Title</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-      </p>
-      <p>
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit amet risus.
-        Donec egestas. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos.
-      </p>
+    <section id="form">
+      <div id="textbox">
+        <h1 style="font-weight: bold">Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          risus.
+        </p>
+        <p>
+          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
+          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
+          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos.
+        </p>
 
-      <form>
-        <input type="email" placeholder="Email" />
-        <button class="btn">Submit</button>
-      </form>
-    </div>
+        <form>
+          <input type="email" placeholder="Email" />
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
 
     <section id="products">
       <div class="product">
         <img src="https://picsum.photos/400/600" alt="Product Image" />
-        <div class="product-description">
-          <h2>Product Name</h2>
-          <p>This is a short description of the product</p>
-        </div>
+
+        <h2>Product Name</h2>
       </div>
 
       <div class="product">
         <img src="https://picsum.photos/400/600" alt="Product Image" />
-        <div class="product-description">
-          <h2>Product Name</h2>
-          <p>This is a short description of the product</p>
-        </div>
+
+        <h2>Product Name</h2>
       </div>
     </section>
 
-    <div id="textbox">
-      <h2 style="font-weight: bold">Title</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
-      </p>
-      <p>
-        Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
-        sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit amet risus.
-        Donec egestas. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos.
-      </p>
+    <section id="journey">
+      <div id="textbox">
+        <h2 style="font-weight: bold">Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
+          risus.
+        </p>
+        <p>
+          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
+          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
+          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos.
+        </p>
 
-      <form>
-        <button class="btn">Läs mer</button>
-      </form>
-    </div>
+        <form>
+          <button class="btn">Läs mer</button>
+        </form>
+      </div>
+    </section>
 
     <div class="carousel-container">
+      <h2 style="font-weight: bold">Title</h2>
       <div class="slider">
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
         <div>
-          <img src="https://unsplash.it/250/250?random" alt="Product Image" />
+          <img src="https://unsplash.it/300/250?random" alt="Product Image" />
         </div>
       </div>
     </div>
