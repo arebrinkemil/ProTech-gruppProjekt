@@ -17,6 +17,17 @@ body {
   overflow-x: hidden;
 }
 
+/* .tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+} */
+
 #signup {
   background-color: #000000;
   color: white;
@@ -170,6 +181,54 @@ nav a:hover {
   width: 100%;
 }
 
+#product1 {
+  background-image: url("images/Lavinsandare_Preview1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+}
+
+#product1:hover {
+  background-image: url("images/Lavinsandare_Preview2.jpg");
+}
+
+#product2 {
+  background-image: url("images/1350x1080snowboard.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+}
+
+#product2:hover {
+  background-image: url("images/1350x1080snowboard.png");
+}
+
+#product3 {
+  background-image: url("images/Pjaxa_preview2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+}
+
+#product3:hover {
+  background-image: url("images/Pjaxa_preview1.jpg");
+}
+
+#product4 {
+  background-image: url("images/Pjaxa_Preview1.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh;
+}
+
+#product4:hover {
+  background-image: url("images/Pjaxa_preview2.jpg");
+}
+
 /* Mobile Toggle */
 
 .title {
@@ -311,7 +370,15 @@ footer h2 {
         rgba(245, 246, 252, 0),
         rgb(255, 255, 255)
       ),
-      url("images/shoe.png");
+      url("images/1920x1080hjalm.png");
+  }
+
+  #mail-title {
+    font-size: 6rem;
+  }
+
+  #info-title {
+    font-size: 3rem;
   }
 
   #banner-text {
@@ -332,9 +399,9 @@ footer h2 {
   #unleash {
     display: flex;
     flex-direction: row;
-    padding-top: 20%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     align-items: center;
     gap: 10%;
   }
@@ -343,19 +410,23 @@ footer h2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-right: 30%;
-    padding-left: 30%;
+    padding-right: 10%;
+    padding-left: 10%;
     padding-top: 10%;
     padding-bottom: 10%;
+  }
+
+  .product {
+    width: 130vw;
   }
 
   #products {
     display: flex;
     flex-direction: row;
     gap: 10%;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
   }
   #journey {
     display: flex;
@@ -402,7 +473,7 @@ footer h2 {
     max-width: 40%;
   }
 
-  img:hover {
+  .img:hover {
     border-radius: 25px;
     transition-duration: 200ms;
   }
@@ -418,7 +489,7 @@ footer h2 {
         rgba(245, 246, 252, 0),
         rgb(255, 255, 255)
       ),
-      url("https://unsplash.it/720/900?cold");
+      url("images/1920x1080hjalm.png");
   }
 
   #banner-text {
@@ -436,9 +507,12 @@ footer h2 {
         rgba(245, 246, 252, 0),
         rgb(255, 255, 255)
       ),
-      url("https://unsplash.it/500/900?cold");
+      url("images/1080x1920hjalm.png");
   }
   #banner-text {
     font-size: 36vw;
+  }
+  #mail-title {
+    font-size: 2rem;
   }
 }
