@@ -17,11 +17,24 @@
       rel="stylesheet"
       href="https://unpkg.com/splitting/dist/splitting-cells.css"
     />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css"
+    />
+    <script src="https://unpkg.com/@glidejs/glide@3.3.0/dist/glide.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <title>PRO Tech</title>
   </head>
   <body>
+    <div id="animation-container">
+      <object id="animation" data="logosub.svg" type="image/svg+xml"></object>
+    </div>
     <div id="signup">
       <p>Prenumerera på vårt nyhetsbrev och få 10% off ...</p>
     </div>
@@ -33,12 +46,15 @@
         <span></span>
         <span></span>
       </label>
-      <div class="siteLogo"><h2>Logo</h2></div>
+      <!-- <div class="siteLogo"><h2>Logo</h2></div> -->
 
       <nav>
-        <a href="#">Element 1</a>
-        <a href="#">Element 2</a>
-        <a href="#">Element 3</a>
+        <a href="#">Products</a>
+        <a href="#">Technology</a>
+        <a href="#">News</a>
+        <a href="#">Our story</a>
+        <a href="#">Support</a>
+        <a href="#">Locations</a>
       </nav>
     </div>
     <div class="nav-buttons">
@@ -48,6 +64,7 @@
       </button>
     </div>
     <div id="banner">
+      <video src="images/skosnurr.mp4" autoplay loop playsinline muted></video>
       <!-- <img src="https://unsplash.it/400/900?cold" alt="Banner Image" /> -->
       <div id="banner-text">
         <div class="title" data-splitting>Pro</div>
@@ -55,157 +72,260 @@
       </div>
     </div>
 
-    <section class="tag" id="unleash">
-      <div id="textbox">
-        <h2 id="info-title" style="font-weight: bold">Unleash your journey</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          risus.
-        </p>
-        <p>
-          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
-          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-        <button class="textboxbtn">Läs mer</button>
+    <div class="section1" id="one-item first">
+      <div class="image-container">
+        <img class="product-helmet" src="images/helmet.png" alt="img" />
       </div>
-
-      <div class="product">
-        <!-- <img src="images/Lavinsandare_Preview1.jpg" alt="Product Image" /> -->
-        <div class="img" id="product1"></div>
-        <div class="product-description">
-          <h2>Product Name</h2>
-          <p>This is a short description of the product.</p>
+      <div class="text-box">
+        <h2>visor 9500</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <div class="button-box">
+          <button>Details</button>
+          <button>Pre order</button>
         </div>
       </div>
-      <div class="product" id="desktop-hidden">
-        <div class="img" id="product2"></div>
-        <div class="product-description">
-          <h2>Product Name</h2>
-          <p>This is a short description of the product.</p>
+    </div>
+
+    <div class="section2" id="mail">
+      <div class="signup">
+        <h1>Bli den första att veta</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email" />
+          <button>Sign Up</button>
         </div>
       </div>
-    </section>
-
-    <section class="tag" id="form">
-      <div id="textbox">
-        <h1 id="mail-title" style="font-weight: bold">
-          Bli den första att veta
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          risus.
-        </p>
-        <p>
-          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
-          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-
-        <form>
-          <input type="email" placeholder="Email" />
-          <button class="btn">Submit</button>
-        </form>
-      </div>
-    </section>
-
-    <section id="products">
-      <div class="product">
-        <div class="img" id="product3"></div>
-
-        <h2>Product Name</h2>
-      </div>
-
-      <div class="product">
-        <div class="img" id="product4"></div>
-
-        <h2>Product Name</h2>
-      </div>
-    </section>
-
-    <section class="tag" id="journey">
-      <div id="textbox">
-        <h2 id="info-title" style="font-weight: bold">Our journey</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          risus.
-        </p>
-        <p>
-          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
-          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos.
-        </p>
-
-        <form>
-          <button class="btn">Läs mer</button>
-        </form>
-      </div>
-    </section>
-
-    <section class="tag">
-      <div class="carousel-container">
-        <h2 style="font-weight: bold">Title</h2>
-        <div class="slider">
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
-          </div>
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
-          </div>
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
-          </div>
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
-          </div>
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
-          </div>
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
-          </div>
-          <div>
-            <img src="https://unsplash.it/300/250?random" alt="Product Image" />
+    </div>
+    <div class="section3" id="two-items">
+      <div class="products">
+        <div class="product">
+          <img class="small-product" src="images/Helmetsmall.png" alt="img" />
+          <div class="text-field">
+            <h2>visor 9500</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p class="long-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, quibusdam, voluptates, quia voluptate quod quos
+              voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+              quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+              doloribus quidem voluptas.
+            </p>
+            <div class="button-box">
+              <button>Details</button>
+              <button>Pre order</button>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="products">
+        <div class="product">
+          <img class="small-product" src="images/Helmetsmall.png" alt="img" />
+          <div class="text-field">
+            <h2>visor 9500</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <p class="long-p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, quibusdam, voluptates, quia voluptate quod quos
+              voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+              quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+              doloribus quidem voluptas.
+            </p>
+            <div class="button-box">
+              <button>Details</button>
+              <button>Pre order</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-      <div id="textbox">
-        <h2 style="font-weight: bold">Our journey</h2>
+    <div class="section4" id="one-item second">
+      <div class="text-box">
+        <h2>visor 9500</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <div class="button-box">
+          <button>Details</button>
+          <button>Pre order</button>
+        </div>
+      </div>
+      <img class="product-boots" src="images/Shoes_Snowboard.png" alt="img" />
+    </div>
+
+
+    <div class="section5" id="jouney">
+      <div class="text-box">
+        <h2>Our Journey</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <p class="long-p">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus quas doloribus quidem voluptas. Quisquam voluptatum,
+          quibusdam, voluptates, quia voluptate quod quos voluptatibus quas
+          doloribus quidem voluptas.
+        </p>
+        <div class="button-box">
+          <button>Details</button>
+          <button>Pre order</button>
+        </div>
+      </div>
+    </div>
+    <div class="section6" id="slider">
+      <div class="wrap">
+        <h2>Adventure testamonials</h2>
+        <p>lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <div class="glide multi1">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li
+                class="glide__slide"
+                style="background-image: url(images/skiier.png)"
+              >
+                <div class="cardtext">
+                  <h3>Precision on powder</h3>
+                  <p>lucas lucasson</p>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="glide__slide"
+                style="background-image: url(images/skiier2.png)"
+              >
+                <div class="cardtext">
+                  <h3>Precision on powder</h3>
+                  <p>lucas lucasson</p>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="glide__slide"
+                style="
+                  background-image: url(images/c7f20effe85534fb797a3af97d05cf98.png);
+                "
+              >
+                <div class="cardtext">
+                  <h3>Precision on powder</h3>
+                  <p>lucas lucasson</p>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="glide__slide"
+                style="background-image: url(images/skiier2.png)"
+              >
+                <div class="cardtext">
+                  <h3>Precision on powder</h3>
+                  <p>lucas lucasson</p>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </li>
+              <li
+                class="glide__slide"
+                style="
+                  background-image: url(images/9ac6e31ffee979e46e24e3939d1db53b.png);
+                "
+              >
+                <div class="cardtext">
+                  <h3>Precision on powder</h3>
+                  <p>lucas lucasson</p>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section7" id="footer">
+      <!-- <div class="text-box">
+        
+        <h2>Our Journey</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-          risus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus <br />
+          quas doloribus quidem voluptas. Quisquam voluptatum, quibusdam,
+          voluptates, quia voluptate quod quos voluptatibus quas doloribus
+          quidem voluptas.
         </p>
         <p>
-          Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-          ultricies sed, dolor. Crass amet eget nisl. Ut tempor massa justo sit
-          amet risus. Donec egestas. Class aptent taciti sociosqu ad litora
-          torquent per conubia nostra, per inceptos himenaeos.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptates, quia voluptate quod quos
+          voluptatibus<br />
+          quas doloribus quidem voluptas. Quisquam voluptatum, quibusdam,
+          voluptates, quia voluptate quod quos voluptatibus quas doloribus
+          quidem voluptas.
         </p>
+        <div class="button-box">
+          <button>Details</button>
+          <button>Pre order</button>
 
-        <form>
-          <input type="email" placeholder="Email" />
-          <button class="btn">Submit</button>
-        </form>
       </div>
-
-      <div class="footer-col">
-        <h2>link 1</h2>
-        <h2>link 2</h2>
-        <h2>link 3</h2>
-        <h2>link 4</h2>
-        <h2>link 5</h2>
-      </div>
-    </footer>
-
-    <script src="script.js"></script>
+    </div> -->
     <script>
       Splitting();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
