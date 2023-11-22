@@ -1,42 +1,50 @@
-// const navToggle = document.querySelector("#navToggle");
-// const navClosedIcon = document.querySelector("#navClosed");
-// const navOpenIcon = document.querySelector("#navOpen");
-// const navIcon = document.querySelectorAll(".navIcon");
-// const nav = document.querySelector("nav");
+var glideMulti1 = new Glide(".multi1", {
+  type: "carousel",
+  autoplay: 3500,
+  perView: 3,
+  breakpoints: {
+    1400: {
+      perView: 2,
+    },
+    800: {
+      perView: 1,
+      peek: {
+        before: 0,
+        after: 50,
+      },
+    },
+    350: {
+      perView: 1,
+      peek: {
+        before: 0,
+        after: 0,
+      },
+    },
+  },
+});
 
-// navToggle.addEventListener("click", () => {
-//   nav.classList.toggle("open");
-//   navIcon.forEach((icon) => {
-//     icon.classList.toggle("hidden");
-//   });
-// });
+glideMulti1.mount();
 
-// window.addEventListener(
-//   "resize",
-//   () => {
-//     if (document.body.clientWidth > 720) {
-//       nav.classList.remove("open");
-//       navIcon.forEach((icon) => {
-//         icon.classList.remove("hidden");
-//       });
-//       navOpenIcon.classList.add("hidden");
-//     }
-//   },
-//   { passive: false }
-// );
+const startTime = Date.now();
 
-// $(document).on("scroll", function () {
-//   var pageTop = $(document).scrollTop();
-//   var pageBottom = pageTop + $(window).height();
-//   var tags = $(".tag");
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    var loadingScreen = document.querySelector("#loadingScreen");
 
-//   for (var i = 0; i < tags.length; i++) {
-//     var tag = tags[i];
+    var elapsedTime = Date.now() - startTime;
 
-//     if ($(tag).position().top < pageBottom) {
-//       $(tag).addClass("visible");
-//     } else {
-//       $(tag).removeClass("visible");
-//     }
-//   }
-// });
+    if (elapsedTime < 5000) {
+      setTimeout(function () {
+        loadingScreen.classList.add("slide-up");
+        setTimeout(function () {
+          loadingScreen.parentNode.removeChild(loadingScreen);
+        }, 500);
+      }, 2000 - elapsedTime);
+    } else {
+      loadingScreen.classList.add("slide-up");
+      setTimeout(function () {
+        loadingScreen.parentNode.removeChild(loadingScreen);
+      }, 500);
+    }
+  }
+};
