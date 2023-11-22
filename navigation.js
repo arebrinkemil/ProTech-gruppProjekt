@@ -216,6 +216,7 @@
     steps = document.querySelectorAll(".js-scroll-step"),
     navigationContainer = document.querySelector(".Quick-navigation"),
     links = navigationContainer.querySelectorAll("a"),
+    line = document.querySelector(".vertical-line"),
     progressIndicator = document.querySelector(".Scroll-progress-indicator");
 
   ScrollManager.init({
@@ -234,8 +235,10 @@
       if (percentage >= 10) {
         progressIndicator.innerHTML = percentage + "%";
         progressIndicator.classList.add("visible");
+        line.classList.add("visible");
       } else {
         progressIndicator.classList.remove("visible");
+        line.classList.remove("visible");
       }
     },
 

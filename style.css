@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap");
+
 :root {
   --background-color: #1b1c1f;
   --secondary-color: #f77c1b;
@@ -8,73 +10,6 @@
   /* border: 1px solid black; */
 }
 
-.Quick-navigation {
-  position: fixed;
-  z-index: 1;
-  margin: 0;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
-.Quick-navigation-item {
-  color: rgba(0, 0, 0, 0.4);
-  text-decoration: none;
-  font-size: 1.3em;
-  transition: color 0.3s;
-  padding: 0.5em;
-  display: block;
-}
-
-.Quick-navigation-item:hover,
-.Quick-navigation-item.current {
-  color: #fff;
-}
-
-.Scroll-progress-indicator {
-  will-change: opacity, transform;
-  transition: all 0.5s;
-  left: -10px;
-  border-radius: 2px;
-  position: absolute;
-  top: 50%;
-  opacity: 0;
-  padding: 2em;
-  transform: translateX(200%) translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.Scroll-progress-indicator.visible {
-  transform: translateX(-100%) translateY(-50%);
-  opacity: 1;
-}
-
-.Scroll-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.5rem;
-  padding: 0.5em;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.3s;
-  outline: none;
-}
-
-.Scroll-to-top.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.Scroll-to-top:hover {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap");
 h1 {
   font-family: "Geologica", sans-serif;
   margin-top: 0px;
@@ -110,6 +45,90 @@ body {
   width: 100vw;
   overflow-x: hidden;
   color: #ffffff;
+}
+
+/*navigation */
+.Quick-navigation {
+  position: fixed;
+  z-index: 1;
+  margin: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.Quick-navigation-item {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  font-size: 1.3em;
+  transition: color 0.3s;
+  padding: 0.5em;
+  display: block;
+}
+
+.Quick-navigation-item:hover,
+.Quick-navigation-item.current {
+  color: #fff;
+}
+
+.Scroll-progress-indicator {
+  will-change: opacity, transform;
+  transition: all 0.5s;
+  left: -30px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  padding: 2em;
+  transform: translateX(-200%) translateY(-50%);
+  background-color: rgba(145, 145, 145, 0.4);
+}
+
+.Scroll-progress-indicator.visible {
+  transform: translateX(100%) translateY(-50%);
+  opacity: 1;
+}
+
+.vertical-line {
+  position: fixed;
+  left: 4rem;
+  bottom: 0;
+  height: 80vh;
+  border-left: 4px solid white;
+  z-index: 10;
+  opacity: 0; /* Start fully transparent */
+  transform: translateX(-100%); /* Start from the left */
+  transition: all 1s; /* Transition for smooth effect */
+}
+
+.vertical-line.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to final position */
+}
+
+.Scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  padding: 0.5em;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s;
+  outline: none;
+}
+
+.Scroll-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Scroll-to-top:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Full-screen loading container */
@@ -606,7 +625,6 @@ li a {
 }
 
 .section7 {
-  padding: 4rem;
   height: 100vh;
   background-color: var(--background-color);
   display: flex;
@@ -614,6 +632,19 @@ li a {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+footer > div {
+  max-width: 40%;
 }
 
 /* Desktop */
@@ -637,19 +668,6 @@ li a {
 
   #desktop-hidden {
     display: none;
-  }
-
-  footer {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5%;
-    padding-top: 5%;
-  }
-
-  footer > div {
-    max-width: 40%;
   }
 
   .img:hover {
@@ -834,6 +852,24 @@ li a {
     border-radius: 50px;
     background-position: center;
     background-size: cover;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  footer h2 {
+    margin: 0;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
   }
 }
 /* small Mobile */
