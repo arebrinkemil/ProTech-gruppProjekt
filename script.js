@@ -1,26 +1,50 @@
-const navToggle = document.querySelector("#navToggle");
-const navClosedIcon = document.querySelector("#navClosed");
-const navOpenIcon = document.querySelector("#navOpen");
-const navIcon = document.querySelectorAll(".navIcon");
-const nav = document.querySelector("nav");
-
-navToggle.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  navIcon.forEach((icon) => {
-    icon.classList.toggle("hidden");
-  });
+var glideMulti1 = new Glide(".multi1", {
+  type: "carousel",
+  autoplay: 3500,
+  perView: 3,
+  breakpoints: {
+    1400: {
+      perView: 2,
+    },
+    800: {
+      perView: 1,
+      peek: {
+        before: 0,
+        after: 50,
+      },
+    },
+    350: {
+      perView: 1,
+      peek: {
+        before: 0,
+        after: 0,
+      },
+    },
+  },
 });
 
-window.addEventListener(
-  "resize",
-  () => {
-    if (document.body.clientWidth > 720) {
-      nav.classList.remove("open");
-      navIcon.forEach((icon) => {
-        icon.classList.remove("hidden");
-      });
-      navOpenIcon.classList.add("hidden");
+glideMulti1.mount();
+
+const startTime = Date.now();
+
+document.onreadystatechange = function () {
+  if (document.readyState === "complete") {
+    var loadingScreen = document.querySelector("#loadingScreen");
+
+    var elapsedTime = Date.now() - startTime;
+
+    if (elapsedTime < 5000) {
+      setTimeout(function () {
+        loadingScreen.classList.add("slide-up");
+        setTimeout(function () {
+          loadingScreen.parentNode.removeChild(loadingScreen);
+        }, 500);
+      }, 2000 - elapsedTime);
+    } else {
+      loadingScreen.classList.add("slide-up");
+      setTimeout(function () {
+        loadingScreen.parentNode.removeChild(loadingScreen);
+      }, 500);
     }
-  },
-  { passive: false }
-);
+  }
+};
