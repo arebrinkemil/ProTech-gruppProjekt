@@ -53,12 +53,21 @@ body {
   z-index: 1;
   margin: 0;
   top: 50%;
+  left: 4rem;
+  opacity: 0; /* Start fully transparent */
+  transform: translateX(-100%); /* Start from the left */
+  transform: translateY(0);
+  transition: all 1s; /* Transition for smooth effect */
+}
 
-  transform: translateY(-50%);
+.Quick-navigation.visible {
+  opacity: 1;
+  transform: translateX(0); /* Move to final position */
+  transform: translateY(-300%);
 }
 
 .Quick-navigation-item {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
   text-decoration: none;
   font-size: 1.3em;
   transition: color 0.3s;

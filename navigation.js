@@ -236,9 +236,11 @@
         progressIndicator.innerHTML = percentage + "%";
         progressIndicator.classList.add("visible");
         line.classList.add("visible");
+        navigationContainer.classList.add("visible");
       } else {
         progressIndicator.classList.remove("visible");
         line.classList.remove("visible");
+        navigationContainer.classList.remove("visible");
       }
     },
 
