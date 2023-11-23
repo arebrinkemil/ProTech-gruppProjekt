@@ -63,7 +63,7 @@ body {
 .Quick-navigation.visible {
   opacity: 1;
   transform: translateX(0); /* Move to final position */
-  transform: translateY(-300%);
+  transform: translateY(-70%);
 }
 
 .Quick-navigation-item {
