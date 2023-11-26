@@ -56,3 +56,43 @@ document.onreadystatechange = function () {
     }
   }
 };
+
+scrollTo = (element) => {
+  window.scroll({
+    behavior: "smooth",
+    left: 0,
+    top: element.offsetTop,
+  });
+  console;
+};
+
+document.getElementById("arrow-down").addEventListener("click", () => {
+  scrollTo(document.querySelector(".section2"));
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  const sections = document.querySelectorAll("#section");
+  let isScrolling;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      window.clearTimeout(isScrolling);
+      isScrolling = setTimeout(() => {
+        let closestSection;
+        let minimumDistance = Infinity;
+
+        sections.forEach((section) => {
+          const distance = Math.abs(section.getBoundingClientRect().top);
+          if (distance < minimumDistance) {
+            minimumDistance = distance;
+            closestSection = section;
+          }
+        });
+
+        closestSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 20); // Adjust delay as needed
+    },
+    false
+  );
+});
