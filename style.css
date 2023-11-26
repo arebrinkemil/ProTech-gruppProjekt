@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "IBM Plex Sans";
-  src: url("fonts/IBM Plex Sans/IBMPlexSans-Regular.ttf");
+  src: url("fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf");
 }
 
 @font-face {
@@ -45,10 +45,14 @@ h3 {
 }
 
 p {
-  font-family: "Geologica", sans-serif;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.18px;
 }
 
 body {
