@@ -591,11 +591,25 @@ li a {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  background-image: url("images/Logo.png");
-  background-repeat: no-repeat;
-  background-position: right;
-  background-position-y: center;
-  background-size: contain;
+  background-image: url("images/mback.png");
+  background-size: cover;
+}
+
+.section5 .text-box {
+  border-radius: 16px;
+  background: rgba(9, 9, 9, 0.25);
+  padding: 68px 27px;
+  filter: blur(0px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.section5 .text-box p {
+  text-align: left;
 }
 
 .section6 {
