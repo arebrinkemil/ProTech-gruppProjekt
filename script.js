@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           }
         });
 
-        closestSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        closestSection.scrollIntoView({ behavior: "smooth", block: "center" });
       }, 20); // Adjust delay as needed
     },
     false
