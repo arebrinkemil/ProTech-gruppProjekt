@@ -1,4 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap");
+@font-face {
+  font-family: "Geologica";
+  src: url("fonts/Geologica/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("fonts/IBM Plex Sans/IBMPlexSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Sans bold";
+  src: url("fonts/IBM Plex Sans/IBMPlexSans-Bold.ttf");
+}
 
 :root {
   --background-color: #1b1c1f;
@@ -45,99 +58,6 @@ body {
   width: 100vw;
   overflow-x: hidden;
   color: #ffffff;
-}
-
-/*navigation */
-.Quick-navigation {
-  position: fixed;
-  z-index: 1;
-  margin: 0;
-  top: 50%;
-  left: 4rem;
-  opacity: 0; /* Start fully transparent */
-  transform: translateX(-100%); /* Start from the left */
-  transform: translateY(0);
-  transition: all 1s; /* Transition for smooth effect */
-}
-
-.Quick-navigation.visible {
-  opacity: 1;
-  transform: translateX(0); /* Move to final position */
-  transform: translateY(-70%);
-}
-
-.Quick-navigation-item {
-  color: rgba(255, 255, 255, 0.4);
-  text-decoration: none;
-  font-size: 1.3em;
-  transition: color 0.3s;
-  padding: 0.5em;
-  display: block;
-}
-
-.Quick-navigation-item:hover,
-.Quick-navigation-item.current {
-  color: #fff;
-}
-
-.Scroll-progress-indicator {
-  will-change: opacity, transform;
-  transition: all 0.5s;
-  left: -30px;
-  border-radius: 2px;
-  position: absolute;
-  top: 50%;
-  opacity: 0;
-  padding: 2em;
-  transform: translateX(-200%) translateY(-50%);
-  background-color: rgba(145, 145, 145, 0.4);
-}
-
-.Scroll-progress-indicator.visible {
-  transform: translateX(100%) translateY(-50%);
-  opacity: 1;
-}
-
-.vertical-line {
-  position: fixed;
-  left: 4rem;
-  bottom: 0;
-  height: 80vh;
-  border-left: 4px solid white;
-  z-index: 10;
-  opacity: 0; /* Start fully transparent */
-  transform: translateX(-100%); /* Start from the left */
-  transition: all 1s; /* Transition for smooth effect */
-}
-
-.vertical-line.visible {
-  opacity: 1;
-  transform: translateX(0); /* Move to final position */
-}
-
-.Scroll-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.5rem;
-  padding: 0.5em;
-  cursor: pointer;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.3s;
-  outline: none;
-}
-
-.Scroll-to-top.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.Scroll-to-top:hover {
-  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Full-screen loading container */
@@ -204,20 +124,6 @@ body {
   color: black;
 }
 
-#signup {
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  padding: 0px;
-  font-size: small;
-  padding: 5px;
-  overflow-x: hidden;
-}
-
-#signup p {
-  margin: 0;
-}
-
 header {
   width: 100vw;
   position: absolute;
@@ -248,8 +154,8 @@ header {
   line-height: 8px;
   text-align: left;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 80px;
+  top: 30px;
   z-index: 201;
 }
 .button:hover {
@@ -258,22 +164,23 @@ header {
 .button span {
   height: 3px;
   width: 100%;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   display: inline-block;
   transition: all 0.5s cubic-bezier(0.62, 0.43, 0.35, 1.47);
 }
 
 .siteLogo {
   position: absolute;
-  width: 50px;
+  width: 60px;
   z-index: 201;
+  padding-top: 38px;
 }
 
 .nav-buttons {
   position: absolute;
-  padding-top: 20px;
+  padding-top: 45px;
   z-index: 201;
-  right: 0;
+  right: 80px;
   display: flex;
   flex-direction: column;
 }
@@ -283,7 +190,7 @@ header {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
-
+  color: white;
   border: none;
   background-color: unset;
 }
@@ -319,20 +226,27 @@ nav {
   padding-left: 3rem;
 }
 nav a {
+  color: #fff;
+
+  font-family: Geologica;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%; /* 56px */
+
   text-decoration: none;
   color: #ffffff;
   display: block;
-  font-size: 18px;
+
   transition: all 0.4s cubic-bezier(0.22, 0.43, 0.35, 1.5);
   opacity: 0;
   transform: scale(0);
   transform-origin: top;
-  font-weight: 500;
-  font-size: 2rem;
+
   cursor: pointer;
   position: relative;
   padding: 10px 20px;
-  font-size: 4rem;
+
   border-top-right-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 1s;
@@ -369,7 +283,7 @@ nav a {
 /* the nav height will be set to the height in pixels that would have for default, using height:auto won't work but you can put that value in pixels creating the slide*/
 #check:checked ~ nav {
   height: 100vh;
-  padding-top: 48px;
+  padding-top: 160px;
   width: 30%;
 }
 
@@ -425,7 +339,7 @@ li a {
 } */
 .banner {
   position: relative;
-  height: calc(100vh - 25px);
+  height: 100vh;
   background-image: url("https://unsplash.it/400/900?cold");
   background-size: cover;
 }
@@ -434,6 +348,42 @@ li a {
   width: 100%;
   object-fit: cover;
   height: 100%;
+}
+
+.banner-info {
+  position: absolute;
+  top: 50%; /* Start at the vertical center */
+  left: 400px;
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+  width: auto; /* Adjust the width as needed */
+
+  color: white; /* Assuming white text for visibility */
+  padding: 20px; /* Spacing around the text */
+  /* ... other styles ... */
+}
+
+.banner-info h1 {
+  color: #fff;
+  font-family: Geologica;
+  font-size: 53px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 63.6px */
+  letter-spacing: -0.53px;
+}
+
+.banner-info p {
+  font-family: "IBM Plex Sans", sans-serif;
+  width: 500px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: 0.18px;
+}
+
+.banner-info .button .outline {
+  border-color: white;
 }
 
 #banner-text {
@@ -445,7 +395,7 @@ li a {
   bottom: 0;
   left: 0;
   width: 100%;
-  color: black;
+  color: rgb(255, 255, 255);
   line-height: 80%;
 }
 
@@ -598,6 +548,69 @@ li a {
   text-align: left;
 }
 
+#scroll-container {
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+  background-color: var(--background-color);
+}
+
+#scroll-text {
+  background-color: var(--background-color);
+
+  color: white;
+  text-wrap: nowrap;
+
+  text-align: center;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+
+  -moz-animation: my-animation 15s linear infinite;
+  -webkit-animation: my-animation 15s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
 .section6 {
   height: 100vh;
   background-color: var(--background-color);
@@ -701,6 +714,7 @@ footer > div {
     display: flex;
     justify-content: flex-end;
     padding-right: 6vw;
+    display: none;
   }
 
   nav a {
@@ -721,14 +735,23 @@ footer > div {
       url("images/1920x1080hjalm.png");
   }
 
+  .banner-info {
+    display: none;
+  }
+
   #check:checked ~ nav {
     height: 100vh;
-    padding-top: 48px;
+    padding-top: 160px;
     width: 50%;
   }
 
   #banner-text {
     font-size: 26vw;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0),
+      rgb(27 28 31)
+    );
   }
 }
 
@@ -751,11 +774,35 @@ footer > div {
     width: 100%;
   }
 
+  .banner-info {
+    display: none;
+  }
+
   #banner-text {
     font-size: 36vw;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0),
+      rgb(27 28 31)
+    );
   }
   #mail-title {
     font-size: 2rem;
+  }
+
+  .button {
+    left: 20px;
+    top: 0px;
+    padding-top: 20px;
+  }
+
+  .nav-buttons {
+    right: 20px;
+    padding-top: 20px;
+  }
+
+  .siteLogo {
+    display: none;
   }
 
   .long-p {

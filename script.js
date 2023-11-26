@@ -39,7 +39,7 @@ document.onreadystatechange = function () {
         setTimeout(function () {
           loadingScreen.parentNode.removeChild(loadingScreen);
         }, 500);
-      }, 5000 - elapsedTime);
+      }, 1000 - elapsedTime);
     } else {
       loadingScreen.classList.add("slide-up");
       setTimeout(function () {
