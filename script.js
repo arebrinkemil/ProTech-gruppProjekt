@@ -23,6 +23,14 @@ var glideMulti1 = new Glide(".multi1", {
   },
 });
 
+var glideSingle = new Glide(".single", {
+  type: "slider",
+  autoplay: 400000,
+  perView: 1,
+});
+
+glideSingle.mount();
+
 glideMulti1.mount();
 
 const startTime = Date.now();
