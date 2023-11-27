@@ -25,7 +25,7 @@ var glideMulti1 = new Glide(".multi1", {
 
 var glideSingle = new Glide(".single", {
   type: "slider",
-  autoplay: 400000,
+  autoplay: 5000,
   perView: 1,
 });
 
@@ -47,7 +47,7 @@ document.onreadystatechange = function () {
         setTimeout(function () {
           loadingScreen.parentNode.removeChild(loadingScreen);
         }, 500);
-      }, 1000 - elapsedTime);
+      }, 4000 - elapsedTime);
     } else {
       loadingScreen.classList.add("slide-up");
       setTimeout(function () {
