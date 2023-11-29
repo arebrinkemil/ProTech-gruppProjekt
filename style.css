@@ -591,10 +591,13 @@ li a {
 .section5 .text-box p {
   text-align: left;
 }
+.button-box > button {
+  margin-top: 3vh;
+}
 
 #scroll-container {
   width: 100%;
-  height: 109px;
+  height: 125px;
   overflow: hidden;
   position: relative;
   background-color: var(--background-color);
@@ -690,65 +693,13 @@ li a {
 }
 
 .section7 {
-  padding-top: 130px;
-  height: 70vh;
+  height: 58vh;
   background-color: #262626;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  column-gap: 37px;
-  align-content: space-between;
-  padding-bottom: 40px;
-}
-.form-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  column-gap: 37px;
-}
-
-.form-text > h1 {
-  color: var(--secondary-color);
-}
-.form-text > p {
-  display: flex;
-  justify-content: center;
-}
-footer > form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 27px;
-  padding-top: 20px;
-}
-form > input {
-  background-color: var(--background-color);
-  width: 250px;
-  height: 35px;
-  border: none;
-  color: white;
-}
-form > button {
-  background-color: var(--secondary-color);
-  width: 130px;
-  height: 38px;
-}
-
-.bottom-text {
-  display: flex;
-  padding: 50px;
-  justify-content: space-between;
-  background-color: #262626;
-  color: white;
 }
 
 /* Desktop */
@@ -802,6 +753,74 @@ form > button {
   nav a {
     font-size: 3rem;
     padding-left: 2rem;
+  }
+
+  .footer-links {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 37px;
+    align-content: space-between;
+    padding-bottom: 40px;
+  }
+  .footer-links :hover {
+    text-decoration: underline;
+  }
+
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 37px;
+  }
+
+  .form-text > h1 {
+    color: var(--secondary-color);
+  }
+  .form-text > p {
+    display: flex;
+    justify-content: center;
+  }
+  footer > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 27px;
+    padding-top: 20px;
+  }
+  .inputAndButton > input {
+    background-color: #414141;
+    width: 250px;
+    height: 35px;
+    border: none;
+    color: white;
+    margin-right: 3vh;
+  }
+  .inputAndButton > button {
+    background-color: var(--secondary-color);
+    width: 130px;
+    height: 38px;
+  }
+
+  .bottom-text {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: #262626;
+    color: white;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+  }
+  .form-container > .form-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vh;
   }
 }
 /* tablet */
@@ -860,6 +879,61 @@ form > button {
 
   .section3 .item {
     width: 50vw;
+  }
+  .footer-links {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 37px;
+    align-content: space-between;
+    padding-bottom: 40px;
+  }
+  .footer-links :hover {
+    text-decoration: underline;
+  }
+
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 37px;
+  }
+
+  .form-text > h1 {
+    color: var(--secondary-color);
+  }
+  .form-text > p {
+    display: flex;
+    justify-content: center;
+  }
+  footer > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 27px;
+    padding-top: 20px;
+  }
+  form > input {
+    background-color: #414141;
+    width: 250px;
+    height: 35px;
+    border: none;
+    color: white;
+  }
+  form > button {
+    background-color: var(--secondary-color);
+    width: 130px;
+    height: 38px;
+  }
+
+  .bottom-text {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: #262626;
+    color: white;
   }
 }
 
@@ -1022,6 +1096,9 @@ form > button {
   .section5 .button-box {
     padding-bottom: 20px;
   }
+  .section6 {
+    height: 95vh;
+  }
 
   .text-box h2 {
     width: 100%;
@@ -1038,53 +1115,91 @@ form > button {
     background-size: cover;
   }
 
+  .section7 {
+    height: 39vh;
+  }
+
+  footer {
+    background-color: #262626;
+  }
   .footer-links {
+    margin-top: 2vh;
+    column-gap: 22px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    justify-content: center;
   }
+
   .form-text {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-left: 30px;
-    column-gap: 10px;
+    justify-content: center;
   }
 
   .form-text > h1 {
     color: var(--secondary-color);
-  }
-  .form-text > p {
+    font-size: 40px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-bottom: 3vh;
   }
 
-  form > input {
-    background-color: var(--background-color);
-    width: 236px;
+  .form-text > p {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 5vh;
+    margin-right: 1vh;
+  }
+
+  footer > form {
+    margin-top: 3vh;
+    margin-left: 5vh;
+  }
+
+  .form-container > .form-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+  }
+
+  .form-container > .inputAndButton {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .inputAndButton > input {
+    background-color: #414141;
+    width: 250px;
     height: 35px;
     border: none;
     color: white;
+    width: 55vw;
+    height: 3vh;
+    margin-right: 1vh;
   }
-  form > button {
-    background-color: var(--secondary-color);
-    width: 97px;
-    height: 38px;
+  .inputAndButton > button {
+    background-color: var(--background-color);
+    width: 22vw;
+    height: 3vh;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
   }
 
   .bottom-text {
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    justify-content: space-between;
-    background-color: #262626;
     color: white;
-  }
-
-  footer h2 {
-    margin: 0;
+    background-color: #262626;
+    padding: 5vh;
   }
 }
+
+footer h2 {
+  margin: 0;
+}
+
 /* small Mobile */
 @media all and (max-width: 400px) {
   #showcase-glides li {
