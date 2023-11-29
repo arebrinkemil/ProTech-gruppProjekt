@@ -100,8 +100,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 const images = [
   {
     id: "image1",
-    hoverSrc: "/images/SnowboardSidaPs.png",
-    originalSrc: "/images/SnowboardFramPS.png",
+    hoverSrc: "/images/Pjaxa2_Nora_Lindstrom.png",
+    originalSrc: "/images/Pjaxa1_Nora_Lindstrom.png",
   },
   {
     id: "image2",
@@ -110,8 +110,8 @@ const images = [
   },
   {
     id: "image3",
-    hoverSrc: "/images/Pjaxa2_Nora_Lindstrom.png",
-    originalSrc: "/images/Pjaxa1_Nora_Lindstrom.png",
+    hoverSrc: "/images/SnowboardSidaPs.png",
+    originalSrc: "/images/SnowboardFramPS.png",
   },
   {
     id: "image4",
