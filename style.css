@@ -432,7 +432,7 @@ li a {
   align-items: center;
   background-color: #1b1c1f;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 100px;
 }
 
 .section1 img {
@@ -518,6 +518,8 @@ li a {
 .content img {
   width: auto;
   max-height: 50vh;
+
+  transition: opacity 0.5s ease-in-out;
 }
 
 .content .text {
