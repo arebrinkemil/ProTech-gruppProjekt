@@ -88,8 +88,8 @@ body {
 
 /* Loader Styles */
 .svg-loader {
-  width: 100px;
-  height: 100px;
+  width: 70%;
+  height: auto;
 }
 
 .filled {
@@ -183,6 +183,11 @@ header {
 }
 .siteLogo > p {
   justify-content: center;
+}
+
+.border-top {
+  border-top: 2px solid #ffffff;
+  width: 50%;
 }
 
 .nav-buttons {
@@ -324,7 +329,7 @@ span.char {
   display: inline-block;
   animation: slide-up 1.25s cubic-bezier(0.5, 0.2, 0, 1);
   animation-fill-mode: both;
-  animation-delay: calc(var(--char-index) * 0.2s);
+  animation-delay: calc(4s + (var(--char-index) * 0.2s));
 }
 @keyframes slide-up {
   from {
@@ -432,7 +437,7 @@ li a {
   align-items: center;
   background-color: #1b1c1f;
   text-align: center;
-  padding-top: 160px;
+  padding-top: 100px;
 }
 
 .section1 img {
@@ -505,6 +510,7 @@ li a {
 
 #product-glide {
   height: 80vh;
+  border-radius: 24px;
   background: linear-gradient(180deg, #404040 0%, #242424 100%);
 }
 .content {
@@ -518,6 +524,8 @@ li a {
 .content img {
   width: auto;
   max-height: 50vh;
+  max-width: 90%;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .content .text {
@@ -561,7 +569,6 @@ li a {
 }
 
 .section5 {
-  padding: 4rem;
   height: 100vh;
   background-color: var(--background-color);
   display: flex;
@@ -573,7 +580,14 @@ li a {
   background-size: cover;
 }
 
+.section5 video {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
 .section5 .text-box {
+  position: absolute;
   width: 684px;
   height: 554px;
   border-radius: 16px;
@@ -586,6 +600,7 @@ li a {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  left: 84px;
 }
 
 .section5 .text-box p {
@@ -659,9 +674,12 @@ li a {
 }
 
 .section6 {
-  height: 120vh;
+  height: 100vh;
   background-color: var(--background-color);
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #showcase-glide {
@@ -671,7 +689,7 @@ li a {
 }
 
 #showcase-glides li {
-  height: 80vh;
+  height: 70vh;
   border-radius: 50px;
   background-position: center;
   background-size: cover;
@@ -875,10 +893,23 @@ li a {
 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+  }
+
+  .section3 .item p {
+    width: 75vw;
   }
 
   .section3 .item {
-    width: 50vw;
+    height: 30%;
+  }
+
+  .section5 .text-box {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
   .footer-links {
     margin-top: 10vh;
@@ -1050,9 +1081,14 @@ li a {
 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .section3 .item {
+    height: 30%;
+  }
+
+  .section3 .item p {
     width: 75vw;
   }
 
@@ -1073,13 +1109,17 @@ li a {
 
   .section5 {
     justify-content: center;
-    padding: 20px;
   }
 
   .section5 .text-box {
-    width: 100%;
+    width: 80%;
     padding: 0;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 25vh;
   }
 
   .section5 .text-box h2 {
@@ -1095,7 +1135,14 @@ li a {
 
   .section5 .button-box {
     padding-bottom: 20px;
+    width: 100%;
+    justify-content: center;
   }
+
+  #section5-button {
+    margin: 0;
+  }
+
   .section6 {
     height: 95vh;
   }
@@ -1109,7 +1156,7 @@ li a {
   }
 
   #showcase-glides li {
-    height: 70vh;
+    height: 60vh;
     border-radius: 50px;
     background-position: center;
     background-size: cover;
@@ -1203,7 +1250,7 @@ footer h2 {
 /* small Mobile */
 @media all and (max-width: 400px) {
   #showcase-glides li {
-    height: 70vh;
+    height: 60vh;
     border-radius: 50px;
     background-position: center;
     background-size: cover;

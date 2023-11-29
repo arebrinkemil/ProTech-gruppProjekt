@@ -96,3 +96,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
     false
   );
 });
+
+const images = [
+  {
+    id: "image1",
+    hoverSrc: "/images/Pjaxa2_Nora_Lindstrom.png",
+    originalSrc: "/images/Pjaxa1_Nora_Lindstrom.png",
+  },
+  {
+    id: "image2",
+    hoverSrc: "/images/HjalmNarbild.png",
+    originalSrc: "/images/HjalmUtanBakgrund.png",
+  },
+  {
+    id: "image3",
+    hoverSrc: "/images/SnowboardSidaPs.png",
+    originalSrc: "/images/SnowboardFramPS.png",
+  },
+  {
+    id: "image4",
+    hoverSrc: "/images/Lavinsandare2_Nora_Lindstrom.png",
+    originalSrc: "/images/Lavinsandare1_Nora_Lindstrom.png",
+  },
+];
+
+images.forEach((img) => {
+  const element = document.getElementById(img.id);
+  element.addEventListener("mouseenter", () => (element.src = img.hoverSrc));
+  element.addEventListener("mouseleave", () => (element.src = img.originalSrc));
+});
