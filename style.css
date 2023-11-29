@@ -174,10 +174,15 @@ header {
 }
 
 .siteLogo {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 60px;
   z-index: 201;
   padding-top: 38px;
+}
+.siteLogo > p {
+  justify-content: center;
 }
 
 .nav-buttons {
@@ -384,6 +389,7 @@ li a {
   font-weight: 400;
   line-height: 140%; /* 25.2px */
   letter-spacing: 0.18px;
+  padding-bottom: 20px;
 }
 
 .banner-info .button .outline {
@@ -426,6 +432,7 @@ li a {
   align-items: center;
   background-color: #1b1c1f;
   text-align: center;
+  padding-top: 160px;
 }
 
 .section1 img {
@@ -534,7 +541,7 @@ li a {
 }
 
 .section3 {
-  height: 33vh;
+  height: 39vh;
   background-color: var(--background-color);
   display: flex;
   justify-content: space-around;
@@ -567,6 +574,8 @@ li a {
 }
 
 .section5 .text-box {
+  width: 684px;
+  height: 554px;
   border-radius: 16px;
   background: rgba(9, 9, 9, 0.25);
   padding: 68px 27px;
@@ -575,17 +584,20 @@ li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
 }
 
 .section5 .text-box p {
   text-align: left;
 }
+.button-box > button {
+  margin-top: 3vh;
+}
 
 #scroll-container {
   width: 100%;
-
+  height: 125px;
   overflow: hidden;
   position: relative;
   background-color: var(--background-color);
@@ -647,9 +659,8 @@ li a {
 }
 
 .section6 {
-  height: 100vh;
+  height: 120vh;
   background-color: var(--background-color);
-
   width: 100vw;
 }
 
@@ -682,26 +693,13 @@ li a {
 }
 
 .section7 {
-  height: 100vh;
-  background-color: var(--background-color);
+  height: 58vh;
+  background-color: #262626;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-}
-
-footer {
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding-left: 5%;
-  padding-top: 5%;
-}
-
-footer > div {
-  max-width: 40%;
 }
 
 /* Desktop */
@@ -755,6 +753,74 @@ footer > div {
   nav a {
     font-size: 3rem;
     padding-left: 2rem;
+  }
+
+  .footer-links {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 37px;
+    align-content: space-between;
+    padding-bottom: 40px;
+  }
+  .footer-links :hover {
+    text-decoration: underline;
+  }
+
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 37px;
+  }
+
+  .form-text > h1 {
+    color: var(--secondary-color);
+  }
+  .form-text > p {
+    display: flex;
+    justify-content: center;
+  }
+  footer > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 27px;
+    padding-top: 20px;
+  }
+  .inputAndButton > input {
+    background-color: #414141;
+    width: 250px;
+    height: 35px;
+    border: none;
+    color: white;
+    margin-right: 3vh;
+  }
+  .inputAndButton > button {
+    background-color: var(--secondary-color);
+    width: 130px;
+    height: 38px;
+  }
+
+  .bottom-text {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: #262626;
+    color: white;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vh;
+  }
+  .form-container > .form-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vh;
   }
 }
 /* tablet */
@@ -813,6 +879,61 @@ footer > div {
 
   .section3 .item {
     width: 50vw;
+  }
+  .footer-links {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 37px;
+    align-content: space-between;
+    padding-bottom: 40px;
+  }
+  .footer-links :hover {
+    text-decoration: underline;
+  }
+
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 37px;
+  }
+
+  .form-text > h1 {
+    color: var(--secondary-color);
+  }
+  .form-text > p {
+    display: flex;
+    justify-content: center;
+  }
+  footer > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 27px;
+    padding-top: 20px;
+  }
+  form > input {
+    background-color: #414141;
+    width: 250px;
+    height: 35px;
+    border: none;
+    color: white;
+  }
+  form > button {
+    background-color: var(--secondary-color);
+    width: 130px;
+    height: 38px;
+  }
+
+  .bottom-text {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    background-color: #262626;
+    color: white;
   }
 }
 
@@ -975,6 +1096,9 @@ footer > div {
   .section5 .button-box {
     padding-bottom: 20px;
   }
+  .section6 {
+    height: 95vh;
+  }
 
   .text-box h2 {
     width: 100%;
@@ -991,24 +1115,91 @@ footer > div {
     background-size: cover;
   }
 
+  .section7 {
+    height: 39vh;
+  }
+
   footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #262626;
   }
-
-  footer h2 {
-    margin: 0;
-  }
-
-  .footer-col {
+  .footer-links {
+    margin-top: 2vh;
+    column-gap: 22px;
+    padding-bottom: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    flex-direction: row;
     justify-content: center;
   }
+
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form-text > h1 {
+    color: var(--secondary-color);
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+  }
+
+  .form-text > p {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    margin-left: 5vh;
+    margin-right: 1vh;
+  }
+
+  footer > form {
+    margin-top: 3vh;
+    margin-left: 5vh;
+  }
+
+  .form-container > .form-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+  }
+
+  .form-container > .inputAndButton {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .inputAndButton > input {
+    background-color: #414141;
+    width: 250px;
+    height: 35px;
+    border: none;
+    color: white;
+    width: 55vw;
+    height: 3vh;
+    margin-right: 1vh;
+  }
+  .inputAndButton > button {
+    background-color: var(--background-color);
+    width: 22vw;
+    height: 3vh;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+
+  .bottom-text {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #262626;
+    padding: 5vh;
+  }
 }
+
+footer h2 {
+  margin: 0;
+}
+
 /* small Mobile */
 @media all and (max-width: 400px) {
   #showcase-glides li {
