@@ -70,32 +70,32 @@ document.getElementById("arrow-down").addEventListener("click", () => {
   scrollTo(document.querySelector(".section2"));
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  const sections = document.querySelectorAll("#section");
-  let isScrolling;
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   const sections = document.querySelectorAll("#section");
+//   let isScrolling;
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(() => {
-        let closestSection;
-        let minimumDistance = Infinity;
+//   window.addEventListener(
+//     "scroll",
+//     () => {
+//       window.clearTimeout(isScrolling);
+//       isScrolling = setTimeout(() => {
+//         let closestSection;
+//         let minimumDistance = Infinity;
 
-        sections.forEach((section) => {
-          const distance = Math.abs(section.getBoundingClientRect().top);
-          if (distance < minimumDistance) {
-            minimumDistance = distance;
-            closestSection = section;
-          }
-        });
+//         sections.forEach((section) => {
+//           const distance = Math.abs(section.getBoundingClientRect().top);
+//           if (distance < minimumDistance) {
+//             minimumDistance = distance;
+//             closestSection = section;
+//           }
+//         });
 
-        closestSection.scrollIntoView({ behavior: "smooth", block: "center" });
-      }, 20); // Adjust delay as needed
-    },
-    false
-  );
-});
+//         closestSection.scrollIntoView({ behavior: "smooth", block: "center" });
+//       }, 20); // Adjust delay as needed
+//     },
+//     false
+//   );
+// });
 
 const images = [
   {
