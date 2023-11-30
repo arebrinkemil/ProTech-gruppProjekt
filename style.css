@@ -187,7 +187,6 @@ header {
 
 .border-top {
   border-top: 2px solid #ffffff;
-  width: 50%;
 }
 
 .nav-buttons {
@@ -1240,6 +1239,7 @@ li a {
     color: white;
     background-color: #262626;
     padding: 5vh;
+    padding-top: 140px;
   }
 }
 
